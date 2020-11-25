@@ -1,0 +1,18 @@
+  table td {
+      border-color: black;
+      border-style: double;
+      background-color: bisque;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    table tr td {
+      border-color: red;
+      border-style: double;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    table tr th {
+      border-color: black;
+      border-style: double;
+      font-size: 20px;
+      background-color: aquamarine;
+      font-family: Arial, Helvetica, sans-serif;
+    }
