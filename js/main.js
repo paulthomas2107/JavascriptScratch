@@ -73,32 +73,50 @@ function displayEmployee(urlEmployeePic, lati, longi) {
   $("#mapWrapper").append('<div id="map" class="map"></div>');
 
   processMap(lati, longi);
+
+ 
 }
 
+var map;
 function processMap(lati, longi) {
-  var map = new ol.Map({
+  map = new ol.Map({
+    target: "map",
     layers: [
       new ol.layer.Tile({
         source: new ol.source.OSM(),
       }),
     ],
-    target: "map",
     view: new ol.View({
-      center: [0, 0],
-      zoom: 2,
+      center: ol.proj.fromLonLat([longi, lati]),
+      zoom: 16,
     }),
   });
+  add_map_point(lati, longi);
+}
 
-  var feature = new ol.Feature({
-    geometry: new ol.geom.Point(
-      ol.proj.transform([lati, longi], "EPSG:4326", "EPSG:3857")
-    ),
-  });
-  var vectorSource = new ol.source.Vector({
-    features: [feature],
-  });
+function add_map_point(lat, lng) {
   var vectorLayer = new ol.layer.Vector({
-    source: vectorSource,
+    source: new ol.source.Vector({
+      features: [
+        new ol.Feature({
+          geometry: new ol.geom.Point(
+            ol.proj.transform(
+              [parseFloat(lng), parseFloat(lat)],
+              "EPSG:4326",
+              "EPSG:3857"
+            )
+          ),
+        }),
+      ],
+    }),
+    style: new ol.style.Style({
+      image: new ol.style.Icon({
+        anchor: [0.5, 0.5],
+        anchorXUnits: "fraction",
+        anchorYUnits: "fraction",
+        src: "https://upload.wikimedia.org/wikipedia/commons/e/ec/RedDot.svg",
+      }),
+    }),
   });
 
   map.addLayer(vectorLayer);
