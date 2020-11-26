@@ -1,25 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no" />
+   
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.4.3/css/ol.css" type="text/css">
+
+    
     <title>Employee List</title>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./js/accounting.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.4.3/build/ol.js"></script>
+    
+   
   </head>
 
   <body>
-    <script src="./js/main.js"></script>
 
-    <table id="POITable">
-      <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Salary</th>
-        <th>Age</th>
-      </tr>
-      <tr></tr>
-    </table>
+    <input hidden id="x" type="number" step="0.0001" value="4.1111">
+    <input hidden id="y" type="number" step="0.0001" value="50.1111">
+    
+    <div>
+      <table style="float: left" id="POITable">
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Salary</th>
+          <th>Age</th>
+        </tr>
+      </table>
+      <table style="float: left" id="EmployeeTable">
+        <tr>
+          <th>ID</th>
+          <th>Title</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>DOB</th>
+          <th>Snap</th>
+        </tr>
+      </table>
+
+      <table style="float: left; width: 400px" id="EmployeePic">
+        <tr>
+          <th>Employee Image</th>
+        </tr>
+      </table>
+
+        <div id="locArea">
+        <table style="float: left; width: 400px"  id="EmployeeLocation">
+          <tr>
+            <th>Employee Location</th>
+            <tr>
+              <td>
+                <div id="mapWrapper">
+                  <div id="map" class="map"></div>
+                </div>
+                 
+            
+              </td>
+            </tr>
+          </tr>
+        </table>
+        </div>
+
+    </div>
   </body>
-  <link rel="stylesheet" href="./css/styles.css" />
 </html>

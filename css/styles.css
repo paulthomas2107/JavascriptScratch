@@ -1,18 +1,33 @@
-  table td {
-      border-color: black;
-      border-style: double;
-      background-color: bisque;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-    table tr td {
-      border-color: red;
-      border-style: double;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-    table tr th {
-      border-color: black;
-      border-style: double;
-      font-size: 20px;
-      background-color: aquamarine;
-      font-family: Arial, Helvetica, sans-serif;
-    }
+table td {
+  border-color: black;
+  border-style: solid;
+  background-color: bisque;
+  font-family: Arial, Helvetica, sans-serif;
+}
+table tr td {
+  border-color: black;
+  border-style: solid;
+  font-family: Arial, Helvetica, sans-serif;
+}
+table tr th {
+  border-color: black;
+  border-style: double;
+  font-size: 16px;
+  background-color: black;
+  color: bisque;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+div h2 {
+  border-color: black;
+  border-style: double;
+  font-size: 16px;
+  background-color: black;
+  color: bisque;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#map {
+  height: 400px;
+  width: 400px;
+}

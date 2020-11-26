@@ -1,0 +1,23 @@
+function initMap(lati, longi) {
+  var dumbo = { lat: -25.344, lng: 131.036 };
+
+  var mapOptions = {
+    center: dumbo,
+    zoom: 3,
+  };
+  var googlemap = new google.maps.Map(
+    document.getElementById("EmployeePic").insertRow(1),
+    mapOptions
+  );
+}
+
+
+ <tr>
+          <th>Employee Loction</th>
+          <td>
+            <div id="map" style="width: 400px; height: 400px"></div>
+          </td>
+        </tr>
+
+        lat(e/w)    long(n/s)
+          
