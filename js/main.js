@@ -73,8 +73,6 @@ function displayEmployee(urlEmployeePic, lati, longi) {
   $("#mapWrapper").append('<div id="map" class="map"></div>');
 
   processMap(lati, longi);
-
- 
 }
 
 var map;
@@ -114,7 +112,7 @@ function add_map_point(lat, lng) {
         anchor: [0.5, 0.5],
         anchorXUnits: "fraction",
         anchorYUnits: "fraction",
-        src: "https://upload.wikimedia.org/wikipedia/commons/e/ec/RedDot.svg",
+        src: "../images/RedDot.png",
       }),
     }),
   });
